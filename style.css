@@ -30,22 +30,10 @@ nav a:hover{color:#fff}.nav-btn{background:var(--gold);color:#111;padding:11px 1
 .stats div{display:flex;flex-direction:column}.stats strong{font:800 28px "Barlow Condensed"}.stats small{font-size:8px;color:#718295;letter-spacing:.12em;margin-top:2px}
 
 .hero-mark{height:510px;position:relative;display:flex;align-items:center}
-.network-visual{width:100%;height:485px;border:1px solid rgba(255,255,255,.13);background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.008));position:relative;overflow:hidden;padding:20px 22px}
-.network-visual:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 52% 48%,rgba(214,163,59,.08),transparent 45%);pointer-events:none}
-.visual-label{position:absolute;z-index:5;color:#7f90a3;font-size:8px;font-weight:800;letter-spacing:.18em}.top-label{top:19px;left:22px}.base-label{bottom:17px;left:22px}
-.map-stage{position:absolute;inset:48px 25px 48px 25px}
-.india-map-image{position:absolute;left:13%;top:2%;width:63%;height:94%;object-fit:contain;opacity:.78;filter:brightness(0) saturate(100%) invert(68%) sepia(54%) saturate(695%) hue-rotate(356deg) brightness(89%) contrast(90%);}
-.map-point,.border-point{position:absolute;z-index:4;display:flex;align-items:center;gap:5px;white-space:nowrap}
-.map-point i,.border-point i{display:block;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(214,163,59,.10),0 0 14px rgba(214,163,59,.25)}
-.map-point b,.border-point b{font-size:7px;letter-spacing:.09em;color:#c4ced8;font-weight:800;text-shadow:0 1px 5px #06111e}
-.siliguri{left:68%;top:32%}.siliguri i{width:11px;height:11px;background:var(--gold2);box-shadow:0 0 0 6px rgba(214,163,59,.14),0 0 18px rgba(214,163,59,.35)}.siliguri b{color:#fff}
-.gujarat{left:17%;top:49%}.mumbai{left:20%;top:60%}.up{left:38%;top:28%}.himachal{left:36%;top:18%}.assam{left:82%;top:37%}.kolkata{left:58%;top:49%}.odisha{left:62%;top:57%}.south-west{left:43%;top:82%}.south-east{left:57%;top:78%}
-.map-route{position:absolute;z-index:2;height:1px;background:repeating-linear-gradient(90deg,var(--gold) 0 5px,transparent 5px 9px);transform-origin:left center;opacity:.75}
-.route-nepal{width:110px;left:69%;top:31%;transform:rotate(-36deg)}.route-nepal span,.route-bhutan span{position:absolute;right:-2px;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--gold2);box-shadow:0 0 0 5px rgba(214,163,59,.10)}
-.route-bhutan{width:105px;left:71%;top:33%;transform:rotate(-18deg)}
-.border-point{z-index:5}.nepal{left:80%;top:16%}.bhutan{left:84%;top:28%}.ftl-tag{border:1px solid rgba(214,163,59,.45);color:var(--gold2);font-size:6px;font-weight:800;letter-spacing:.08em;padding:2px 4px;margin-left:2px}
-.network-legend{position:absolute;right:20px;bottom:14px;display:flex;gap:7px;align-items:center}.network-legend span{border:1px solid rgba(214,163,59,.35);color:#b7a06a;padding:4px 7px;font-size:7px;letter-spacing:.1em;font-weight:800}.network-legend span:first-child{border:0;padding:0;color:#718195;margin-right:4px}.network-legend span:first-child i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-right:5px}
-
+.network-visual{width:100%;height:485px;border:1px solid rgba(255,255,255,.13);background:#06111e;position:relative;overflow:hidden}
+.route-network-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.network-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,17,30,.05),rgba(6,17,30,.18));pointer-events:none}
+.network-caption{position:absolute;z-index:3;left:20px;right:20px;top:17px;display:flex;justify-content:space-between;gap:15px;color:#8b9bad;font-size:8px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 1px 8px #06111e}
 .hero-strip{position:absolute;bottom:0;left:0;right:0;z-index:3;background:rgba(4,13,23,.72);border-top:1px solid rgba(255,255,255,.1)}
 .hero-strip .container{display:flex;justify-content:space-between;padding:14px 0;color:#718195;font-size:8px;letter-spacing:.16em;font-weight:800}
 
@@ -105,7 +93,7 @@ nav a:hover{color:#fff}.nav-btn{background:var(--gold);color:#111;padding:11px 1
 
 .cta{background:var(--gold);padding:62px 0}.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:50px}
 .cta h2{font-size:52px;letter-spacing:-.02em}.cta p{margin:14px 0 0;color:#55441f}.cta-buttons{display:flex;flex-direction:column;align-items:flex-start;gap:9px;min-width:220px}
-.btn.dark{background:#071321;color:#fff}.btn.outline{border-color:#071321;color:#071321}.phone{font-size:12px;font-weight:800;margin-top:4px}
+.btn.dark{background:#071321;color:#fff}.btn.outline{border-color:#071321;color:#071321}
 
 footer{background:#050d17;color:#fff;padding:58px 0 20px}.footer-grid{display:grid;grid-template-columns:1.5fr .7fr 1fr;gap:85px}
 .footer-grid img{width:132px;height:44px;object-fit:contain;mix-blend-mode:screen}.footer-grid p,.footer-grid a{font-size:11px;color:#7c8999;line-height:1.8}
@@ -114,7 +102,7 @@ footer{background:#050d17;color:#fff;padding:58px 0 20px}.footer-grid{display:gr
 
 @media(max-width:900px){
   .hero-inner,.two-col,.network-inner{grid-template-columns:1fr}
-  .hero-mark{height:450px}.hero-inner{padding:70px 0}.industry-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-mark{height:450px}.network-visual{height:425px}.hero-inner{padding:70px 0}.industry-grid{grid-template-columns:repeat(2,1fr)}
   .why-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}
 }
 @media(max-width:680px){
@@ -123,7 +111,7 @@ footer{background:#050d17;color:#fff;padding:58px 0 20px}.footer-grid{display:gr
   nav.open{display:flex}.nav-btn{text-align:center}.hero{min-height:0}.hero h1{font-size:62px}
   .hero-inner{min-height:0;padding:65px 0 40px}.stats{gap:18px;flex-wrap:wrap}.stats strong{font-size:24px}
   .hero-strip{position:relative}.hero-strip .container{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .hero-mark{height:390px}.network-visual{height:375px;padding:16px 10px}.map-stage{inset:43px 10px 42px}.india-map-image{left:7%;width:69%;height:94%}.map-point b,.border-point b{font-size:6px}.network-legend{right:10px}.network-legend span{padding:3px 5px;font-size:6px}
+  .hero-mark{height:390px}.network-visual{height:375px}.network-caption{left:12px;right:12px;font-size:6px}
   .map-labels text,.border-nodes text{font-size:6px}.section{padding:75px 0}.two-col{gap:45px}.facts{gap:25px;flex-wrap:wrap}
   .heading-row{display:block}.heading-row p{margin-top:18px}.service{grid-template-columns:42px 70px 1fr}.service>a{display:none}
   .service-badge{width:58px;height:58px}.service h3{font-size:20px}.industry-grid,.why-grid{grid-template-columns:1fr}
@@ -134,28 +122,3 @@ footer{background:#050d17;color:#fff;padding:58px 0 20px}.footer-grid{display:gr
   .copyright{display:block}.copyright a{display:block;margin-top:9px}
 }
 
-/* HERO ROUTE NETWORK — SILIGURI TO MULTI-REGION COVERAGE */
-.map-stage{position:absolute;inset:48px 25px 48px 25px;overflow:hidden}
-.india-map-image{position:absolute;left:13%;top:2%;width:63%;height:94%;object-fit:contain;opacity:.82;filter:brightness(0) saturate(100%) invert(68%) sepia(54%) saturate(695%) hue-rotate(356deg) brightness(89%) contrast(90%);z-index:1}
-.route-overlay{position:absolute;inset:0;width:100%;height:100%;z-index:3;overflow:visible}
-.route-overlay .routes path{fill:none;stroke:var(--gold);stroke-width:2.4;stroke-dasharray:10 9;stroke-linecap:round;opacity:.9}
-.route-overlay .routes circle{fill:var(--gold2);stroke:#071321;stroke-width:2}
-.route-overlay .routes .hub{fill:var(--gold2);stroke:rgba(239,199,107,.25);stroke-width:10}
-.coverage-nodes circle{fill:var(--gold);opacity:.9}
-.hub-label,.border-route-label{position:absolute;z-index:5;display:flex;align-items:center;gap:6px;white-space:nowrap}
-.hub-label{left:68%;top:30%;font-size:7px;letter-spacing:.1em;color:#fff;font-weight:800}
-.hub-label i,.border-route-label i{display:block;width:7px;height:7px;border-radius:50%;background:var(--gold2);box-shadow:0 0 0 5px rgba(214,163,59,.1)}
-.border-route-label{font-size:7px;letter-spacing:.1em;color:#c4ced8;font-weight:800}
-.border-nepal{left:75%;top:8%}.border-bhutan{left:82%;top:22%}
-.network-legend{position:absolute;right:20px;bottom:14px;display:flex;gap:7px;align-items:center;z-index:6}
-.network-legend span{border:1px solid rgba(214,163,59,.35);color:#b7a06a;padding:4px 7px;font-size:7px;letter-spacing:.1em;font-weight:800}
-.network-legend span:first-child{border:0;padding:0;color:#718195;margin-right:4px}
-.network-legend span:first-child i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-right:5px}
-
-@media(max-width:900px){
-  .map-stage{inset:43px 10px 42px}
-  .india-map-image{left:7%;width:69%;height:94%}
-  .hub-label,.border-route-label{font-size:6px}
-  .network-legend{right:10px}
-  .network-legend span{padding:3px 5px;font-size:6px}
-}
