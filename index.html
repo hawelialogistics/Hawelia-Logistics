@@ -47,86 +47,29 @@
         <div class="visual-label top-label">TRANSPORTATION NETWORK</div>
         <div class="visual-label base-label">SILIGURI / INDIA / NEPAL / BHUTAN</div>
 
-        <svg class="network-svg" viewBox="0 0 600 500" role="img" aria-label="Route network across India, Nepal and Bhutan">
-          <defs>
-            <linearGradient id="routeGold" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#d6a33b" stop-opacity=".15"/>
-              <stop offset=".5" stop-color="#d6a33b"/>
-              <stop offset="1" stop-color="#efc76b" stop-opacity=".15"/>
-            </linearGradient>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="5" result="blur"/>
-              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-          </defs>
+        <div class="map-stage">
+          <img class="india-map-image" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/India_outline.svg" alt="Outline map of India">
 
-          <!-- Stylised India / subcontinent silhouette -->
-          <path class="landmass" d="M285 63 L338 77 L363 105 L391 119 L405 151 L430 168 L423 198 L445 218 L430 245 L446 274 L426 293 L414 326 L395 347 L384 382 L364 405 L348 442 L329 418 L314 389 L299 363 L282 339 L266 311 L250 289 L230 264 L214 239 L193 222 L180 198 L190 176 L177 155 L198 139 L218 119 L238 103 L260 83 Z"/>
+          <div class="map-route route-nepal"><span></span></div>
+          <div class="map-route route-bhutan"><span></span></div>
 
-          <!-- Nepal / Bhutan region -->
-          <path class="border-zone" d="M285 63 L338 77 L363 105 L391 119 L405 151 L430 168 L423 198 L395 185 L365 171 L337 156 L309 139 L282 123 L260 103 Z"/>
+          <div class="map-point siliguri"><i></i><b>SILIGURI</b></div>
+          <div class="map-point gujarat"><i></i><b>GUJARAT</b></div>
+          <div class="map-point mumbai"><i></i><b>MUMBAI</b></div>
+          <div class="map-point up"><i></i><b>UP</b></div>
+          <div class="map-point himachal"><i></i><b>HIMACHAL</b></div>
+          <div class="map-point assam"><i></i><b>ASSAM</b></div>
+          <div class="map-point kolkata"><i></i><b>KOLKATA</b></div>
+          <div class="map-point odisha"><i></i><b>ODISHA</b></div>
+          <div class="map-point south-west"><i></i><b>SOUTH</b></div>
+          <div class="map-point south-east"><i></i></div>
 
-          <!-- Major route lines -->
-          <g class="routes">
-            <path d="M311 128 C268 145 238 168 215 204 C188 244 175 287 145 318"/>
-            <path d="M311 128 C345 157 365 194 367 238 C369 286 352 328 330 373"/>
-            <path d="M311 128 C357 128 407 140 459 157 C493 168 519 178 543 196"/>
-            <path d="M311 128 C344 110 381 94 424 84"/>
-            <path d="M311 128 C289 103 273 79 261 52"/>
-            <path d="M311 128 C326 101 338 74 349 44"/>
-            <path d="M311 128 C375 168 430 222 474 286 C496 317 514 344 540 371"/>
-            <path d="M311 128 C269 120 225 116 182 124 C146 131 117 146 84 165"/>
-            <path d="M311 128 C286 184 278 239 285 290 C292 341 310 387 329 440"/>
-          </g>
+          <div class="border-point nepal"><i></i><b>NEPAL</b><span class="ftl-tag">FTL</span></div>
+          <div class="border-point bhutan"><i></i><b>BHUTAN</b><span class="ftl-tag">FTL</span></div>
+        </div>
 
-          <!-- Route nodes -->
-          <g class="nodes">
-            <circle cx="311" cy="128" r="10" class="hub" filter="url(#glow)"/>
-            <circle cx="215" cy="204" r="5"/>
-            <circle cx="175" cy="287" r="5"/>
-            <circle cx="145" cy="318" r="5"/>
-            <circle cx="367" cy="238" r="5"/>
-            <circle cx="352" cy="328" r="5"/>
-            <circle cx="330" cy="373" r="5"/>
-            <circle cx="459" cy="157" r="5"/>
-            <circle cx="519" cy="178" r="5"/>
-            <circle cx="424" cy="84" r="5"/>
-            <circle cx="261" cy="52" r="5"/>
-            <circle cx="349" cy="44" r="5"/>
-            <circle cx="474" cy="286" r="5"/>
-            <circle cx="514" cy="344" r="5"/>
-            <circle cx="182" cy="124" r="5"/>
-            <circle cx="117" cy="146" r="5"/>
-            <circle cx="285" cy="290" r="5"/>
-            <circle cx="310" cy="387" r="5"/>
-            <circle cx="329" cy="440" r="5"/>
-          </g>
-
-          <!-- Labels -->
-          <g class="map-labels">
-            <text x="275" y="119" class="hub-label">SILIGURI</text>
-            <text x="442" y="150">GUJARAT</text>
-            <text x="497" y="171">MUMBAI</text>
-            <text x="394" y="76">UP / NORTH</text>
-            <text x="235" y="47">HIMACHAL</text>
-            <text x="348" y="35">NEPAL</text>
-            <text x="404" y="201">ODISHA</text>
-            <text x="515" y="385">SOUTH</text>
-            <text x="58" y="158">ASSAM</text>
-            <text x="170" y="225">KOLKATA</text>
-            <text x="338" y="460">SOUTH INDIA</text>
-          </g>
-
-          <!-- Cross-border nodes -->
-          <g class="border-nodes">
-            <circle cx="430" cy="60" r="7"/>
-            <circle cx="469" cy="92" r="7"/>
-            <path d="M405 105 C431 80 448 69 469 92" class="border-route"/>
-            <text x="476" y="95">BHUTAN</text>
-          </g>
-        </svg>
-
-        <div class="route-pills">
+        <div class="network-legend">
+          <span><i></i> ACTIVE ROUTE COVERAGE</span>
           <span>INDIA</span><span>NEPAL</span><span>BHUTAN</span>
         </div>
       </div>
@@ -290,7 +233,7 @@
 
 <section class="section why">
   <div class="container">
-    <div class="kicker">08 / WHY HAWELIA</div>
+    <div class="kicker">08 / WHY HAWELIA LOGISTICS</div>
     <h2>Transportation is<br><b>about consistency.</b></h2>
     <div class="why-grid">
       <article><span>01</span><h3>Established Experience</h3><p>Operating since 1980, with 46 years of experience in the transportation business.</p></article>
