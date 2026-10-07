@@ -133,3 +133,29 @@ footer{background:#050d17;color:#fff;padding:58px 0 20px}.footer-grid{display:gr
   .cta-inner{display:block}.cta-buttons{margin-top:30px}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}
   .copyright{display:block}.copyright a{display:block;margin-top:9px}
 }
+
+/* HERO ROUTE NETWORK — SILIGURI TO MULTI-REGION COVERAGE */
+.map-stage{position:absolute;inset:48px 25px 48px 25px;overflow:hidden}
+.india-map-image{position:absolute;left:13%;top:2%;width:63%;height:94%;object-fit:contain;opacity:.82;filter:brightness(0) saturate(100%) invert(68%) sepia(54%) saturate(695%) hue-rotate(356deg) brightness(89%) contrast(90%);z-index:1}
+.route-overlay{position:absolute;inset:0;width:100%;height:100%;z-index:3;overflow:visible}
+.route-overlay .routes path{fill:none;stroke:var(--gold);stroke-width:2.4;stroke-dasharray:10 9;stroke-linecap:round;opacity:.9}
+.route-overlay .routes circle{fill:var(--gold2);stroke:#071321;stroke-width:2}
+.route-overlay .routes .hub{fill:var(--gold2);stroke:rgba(239,199,107,.25);stroke-width:10}
+.coverage-nodes circle{fill:var(--gold);opacity:.9}
+.hub-label,.border-route-label{position:absolute;z-index:5;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.hub-label{left:68%;top:30%;font-size:7px;letter-spacing:.1em;color:#fff;font-weight:800}
+.hub-label i,.border-route-label i{display:block;width:7px;height:7px;border-radius:50%;background:var(--gold2);box-shadow:0 0 0 5px rgba(214,163,59,.1)}
+.border-route-label{font-size:7px;letter-spacing:.1em;color:#c4ced8;font-weight:800}
+.border-nepal{left:75%;top:8%}.border-bhutan{left:82%;top:22%}
+.network-legend{position:absolute;right:20px;bottom:14px;display:flex;gap:7px;align-items:center;z-index:6}
+.network-legend span{border:1px solid rgba(214,163,59,.35);color:#b7a06a;padding:4px 7px;font-size:7px;letter-spacing:.1em;font-weight:800}
+.network-legend span:first-child{border:0;padding:0;color:#718195;margin-right:4px}
+.network-legend span:first-child i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-right:5px}
+
+@media(max-width:900px){
+  .map-stage{inset:43px 10px 42px}
+  .india-map-image{left:7%;width:69%;height:94%}
+  .hub-label,.border-route-label{font-size:6px}
+  .network-legend{right:10px}
+  .network-legend span{padding:3px 5px;font-size:6px}
+}

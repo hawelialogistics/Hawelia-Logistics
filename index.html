@@ -42,34 +42,52 @@
       </div>
     </div>
 
-    <div class="hero-mark" aria-label="Hawelia Logistics transportation network across India, Nepal and Bhutan">
+    <div class="hero-mark" aria-label="Hawelia Logistics transportation routes from Siliguri across India, Nepal and Bhutan">
       <div class="network-visual">
         <div class="visual-label top-label">TRANSPORTATION NETWORK</div>
         <div class="visual-label base-label">SILIGURI / INDIA / NEPAL / BHUTAN</div>
 
         <div class="map-stage">
-          <img class="india-map-image" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/India_outline.svg" alt="Outline map of India">
+          <img class="india-map-image" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/India_outline.svg" alt="India transportation network map">
 
-          <div class="map-route route-nepal"><span></span></div>
-          <div class="map-route route-bhutan"><span></span></div>
+          <svg class="route-overlay" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <filter id="routeGlow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Siliguri hub -->
+            <g class="routes" filter="url(#routeGlow)">
+              <path d="M690 235 C615 185 525 150 405 115"/>
+              <path d="M690 235 C610 250 500 260 335 315"/>
+              <path d="M690 235 C600 330 510 400 365 470"/>
+              <path d="M690 235 C640 350 595 485 555 620"/>
+              <path d="M690 235 C705 345 700 470 675 575"/>
+              <path d="M690 235 C780 285 815 360 825 455"/>
+              <path d="M690 235 C755 205 825 170 885 135"/>
+              <path d="M690 235 C735 225 790 220 850 215"/>
+              <path d="M690 235 C715 170 735 115 760 75"/>
+              <circle cx="690" cy="235" r="10" class="hub"/>
+              <circle cx="405" cy="115" r="5"/><circle cx="335" cy="315" r="5"/><circle cx="365" cy="470" r="5"/>
+              <circle cx="555" cy="620" r="5"/><circle cx="675" cy="575" r="5"/><circle cx="825" cy="455" r="5"/>
+              <circle cx="885" cy="135" r="5"/><circle cx="850" cy="215" r="5"/><circle cx="760" cy="75" r="5"/>
+            </g>
+            <!-- route coverage nodes across the landmass -->
+            <g class="coverage-nodes">
+              <circle cx="520" cy="195" r="4"/><circle cx="450" cy="245" r="4"/><circle cx="420" cy="365" r="4"/>
+              <circle cx="475" cy="455" r="4"/><circle cx="565" cy="525" r="4"/><circle cx="645" cy="485" r="4"/>
+              <circle cx="735" cy="385" r="4"/><circle cx="775" cy="305" r="4"/>
+            </g>
+          </svg>
 
-          <div class="map-point siliguri"><i></i><b>SILIGURI</b></div>
-          <div class="map-point gujarat"><i></i><b>GUJARAT</b></div>
-          <div class="map-point mumbai"><i></i><b>MUMBAI</b></div>
-          <div class="map-point up"><i></i><b>UP</b></div>
-          <div class="map-point himachal"><i></i><b>HIMACHAL</b></div>
-          <div class="map-point assam"><i></i><b>ASSAM</b></div>
-          <div class="map-point kolkata"><i></i><b>KOLKATA</b></div>
-          <div class="map-point odisha"><i></i><b>ODISHA</b></div>
-          <div class="map-point south-west"><i></i><b>SOUTH</b></div>
-          <div class="map-point south-east"><i></i></div>
-
-          <div class="border-point nepal"><i></i><b>NEPAL</b><span class="ftl-tag">FTL</span></div>
-          <div class="border-point bhutan"><i></i><b>BHUTAN</b><span class="ftl-tag">FTL</span></div>
+          <div class="hub-label"><i></i><b>SILIGURI</b></div>
+          <div class="border-route-label border-nepal"><i></i><b>NEPAL</b></div>
+          <div class="border-route-label border-bhutan"><i></i><b>BHUTAN</b></div>
         </div>
 
         <div class="network-legend">
-          <span><i></i> ACTIVE ROUTE COVERAGE</span>
+          <span><i></i> ROUTE COVERAGE</span>
           <span>INDIA</span><span>NEPAL</span><span>BHUTAN</span>
         </div>
       </div>
