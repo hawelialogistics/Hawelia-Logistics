@@ -1,0 +1,43 @@
+/* Hawelia Logistics — hero map integration
+   Add this file to the repository root, then link it after style.css in index.html. */
+
+.hero-mark,
+.network-visual {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.network-visual {
+  position: relative;
+  overflow: visible !important;
+}
+
+.route-network-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+
+  /* Makes the dark image backdrop blend into the site's dark hero section. */
+  mix-blend-mode: screen;
+  filter: contrast(1.06) saturate(1.08);
+}
+
+.network-caption {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/* Keep the map integrated on smaller screens as well. */
+@media (max-width: 900px) {
+  .route-network-image {
+    mix-blend-mode: screen;
+  }
+}
