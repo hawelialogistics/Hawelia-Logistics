@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hawelialogistics.github.io/Hawelia-Logistics/sitemap.xml
