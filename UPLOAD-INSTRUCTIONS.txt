@@ -1,0 +1,23 @@
+HAWELIA LOGISTICS WEBSITE UPDATE — UPLOAD INSTRUCTIONS
+
+Files in this package:
+1. index.html — updated page content and structure
+2. style.css — responsive design and styling
+3. india-logistics-network-map.png — the supplied India route map
+4. hawelia-logo.png is NOT included; keep the existing logo file in your repository root.
+
+HOW TO UPLOAD TO GITHUB:
+1. Open https://github.com/hawelialogistics/Hawelia-Logistics
+2. Open the repository's main/root file list.
+3. Upload the new index.html and style.css, replacing the existing files.
+4. Upload india-logistics-network-map.png into the same root directory.
+5. Commit the changes to the main branch.
+6. Wait for GitHub Pages to redeploy, then refresh the live website.
+
+IMPORTANT:
+- Keep hawelia-logo.png in the root; the updated HTML references it.
+- This is a static website bundle and does not require a build step.
+- All visible phone-number text and telephone links have been removed. Quote buttons now open an email draft addressed to hawelialogistics@gmail.com.
+- “Email Us” opens the user's email application.
+- The LinkedIn icon links to https://www.linkedin.com/company/hawelialogistics/
+- The map image is used in the homepage hero and network section.
