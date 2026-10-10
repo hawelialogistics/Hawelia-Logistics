@@ -1,7 +1,7 @@
 HAWELIA LOGISTICS WEBSITE UPDATE — UPLOAD INSTRUCTIONS
 
 Files in this package:
-1. index.html — updated page content and structure
+1. index.html — updated page content and structure, including a corporate Hawelia Logistics wordmark in the header
 2. style.css — responsive design and styling
 3. india-logistics-network-map.png — the supplied India route map
 4. hawelia-logo.png is NOT included; keep the existing logo file in your repository root.
