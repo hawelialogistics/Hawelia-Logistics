@@ -21,3 +21,5 @@ IMPORTANT:
 - “Email Us” opens the user's email application.
 - The LinkedIn icon links to https://www.linkedin.com/company/hawelialogistics/
 - The map image is used in the homepage hero and network section.
+
+Latest update: the Services section now distinguishes the core FTL transportation service from geographic reach and Nepal/Bhutan connectivity. The Industries section explicitly states that the four displayed sectors are illustrative examples, not an exhaustive list.
