@@ -95,6 +95,60 @@
 
 </style>
 
+
+<style id="hawelia-premium-motion">
+  /* Subtle motion only: no layout, copy, or component changes. */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero .eyebrow,
+    .hero h1,
+    .hero .hero-intro,
+    .hero .hero-actions,
+    .hero .hero-stats,
+    .hero .hero-visual,
+    .hero .hero-bottom .container {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: hawelia-hero-enter 680ms cubic-bezier(.2,.7,.2,1) forwards;
+    }
+    .hero .eyebrow { animation-delay: 80ms; }
+    .hero h1 { animation-delay: 170ms; }
+    .hero .hero-intro { animation-delay: 280ms; }
+    .hero .hero-actions { animation-delay: 380ms; }
+    .hero .hero-stats { animation-delay: 470ms; }
+    .hero .hero-visual { animation-delay: 250ms; }
+    .hero .hero-bottom .container { animation-delay: 560ms; }
+
+    .motion-reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 620ms ease, transform 620ms cubic-bezier(.2,.7,.2,1);
+    }
+    .motion-reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .service-row, .purpose-card, .industry-grid article, .why-grid article,
+    .facts > div, .siliguri-services li {
+      transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+    }
+    .service-row:hover, .purpose-card:hover, .industry-grid article:hover,
+    .why-grid article:hover, .facts > div:hover, .siliguri-services li:hover {
+      transform: translateY(-3px);
+    }
+    .button, .nav-cta, .round-link, .text-link, .site-footer a {
+      transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease, transform 200ms ease;
+    }
+    .button:hover, .nav-cta:hover { transform: translateY(-2px); }
+    .button span, .nav-cta span, .round-link { transition: transform 200ms ease; }
+    .button:hover span, .nav-cta:hover span { transform: translateX(3px); }
+    .map-frame img, .network-art img { transition: transform 600ms ease; }
+    .map-frame:hover img, .network-art:hover img { transform: scale(1.012); }
+  }
+  @keyframes hawelia-hero-enter {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  }
+</style>
+
 </head>
 <body>
 <header class="site-header">
@@ -295,7 +349,7 @@
   
   <section class="cta-section">
     <div class="container cta-grid">
-      <div><div class="kicker kicker-dark">08 / GET IN TOUCH</div><h2>Let’s move your next requirement</h2><p>Connect with our team to discuss your transportation requirement</p></div>
+      <div><div class="kicker kicker-dark">08 / GET IN TOUCH</div><h2>Let’s move your next requirement.</h2><p>Connect with our team to discuss your transportation requirement</p></div>
       <div class="cta-actions">
         <a rel="noopener noreferrer" target="_blank" class="button button-navy" href="https://wa.me/919641049255?text=Hello%2C%20I%20would%20like%20to%20request%20a%20freight%20quotation%20for%20my%20transportation%20requirements.">Get a Quote <span aria-hidden="true">↗</span></a>
         <a class="button button-plain" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hawelialogistics%40gmail.com">Email Us <span aria-hidden="true">↗</span></a>
@@ -327,5 +381,31 @@
     menuToggle.setAttribute('aria-label', 'Open navigation');
   }));
 </script>
+
+<script id="hawelia-scroll-reveal">
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion || !('IntersectionObserver' in window)) return;
+  const targets = document.querySelectorAll(
+    '.about-section .section-heading, .about-section .about-copy, .mission-grid .purpose-card, .services-section .section-intro-row, .services-section .service-row, .industries-section .section-intro-row, .industry-grid article, .network-copy, .network-art, .why-section > .container > .kicker, .why-section > .container > h2, .why-grid article, .siliguri-services > *, .cta-section .cta-grid > *'
+  );
+  targets.forEach((el, index) => {
+    el.classList.add('motion-reveal');
+    if (el.matches('.service-row, .purpose-card, .industry-grid article, .why-grid article, .siliguri-services li')) {
+      el.style.transitionDelay = `${(index % 4) * 65}ms`;
+    }
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+  targets.forEach(el => observer.observe(el));
+})();
+</script>
+
 </body>
 </html>
